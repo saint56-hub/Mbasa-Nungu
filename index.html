@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Mbasa Nungu — Armed Response, Armed Escort, Armed Guard and Rapid Response | Cape Town">
+<meta name="theme-color" content="#080b0d">
+<title>Mbasa Nungu | Armed Response & Protection</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap');
+:root{--bg:#070a0c;--panel:#10161a;--panel2:#151d21;--text:#f3f5f4;--muted:#9da8ad;--gold:#c9a44c;--line:#253036;--green:#58c48c;--max:1180px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#070a0c;color:var(--text);font-family:Inter,Arial,sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
+.nav{height:74px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;position:relative;z-index:5}
+.logo{font-weight:800;letter-spacing:.14em}.logo i{color:var(--gold);font-style:normal}
+.navlinks{display:flex;gap:24px;font-size:12px;color:#bdc6ca}.navlinks a:hover{color:#fff}
+.menu{display:none;background:none;border:1px solid var(--line);color:#fff;padding:8px 11px}
+.hero{min-height:760px;position:relative;overflow:hidden;background:#050708}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,6,8,.97) 0%,rgba(3,6,8,.86) 46%,rgba(3,6,8,.42) 100%),linear-gradient(0deg,#070a0c 0%,transparent 50%);z-index:1}
+.hero-bg{position:absolute;inset:0;background:url("assets/security-operations.jpg") center/cover no-repeat;filter:contrast(1.08) saturate(.72);opacity:.72}
+.hero-content{position:relative;z-index:2;padding:110px 0 70px;max-width:850px}
+.kicker{color:var(--gold);font-size:11px;font-weight:800;letter-spacing:.2em;text-transform:uppercase}
+h1,h2,h3{font-family:"Barlow Condensed",Arial,sans-serif;text-transform:uppercase;line-height:.98}
+h1{font-size:clamp(70px,11vw,128px);margin:17px 0 9px;letter-spacing:.015em}
+.hero h2{font-family:Inter,sans-serif;text-transform:none;font-size:23px;line-height:1.35;margin:0 0 17px;max-width:720px}
+.hero p{color:#cbd3d6;max-width:720px;font-size:15px}
+.actions{display:flex;flex-wrap:wrap;gap:11px;margin:30px 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 17px;border:1px solid #3a464c;background:#12191d;font-weight:800;font-size:12px;text-transform:uppercase;letter-spacing:.06em;border-radius:4px}
+.btn.primary{background:var(--gold);border-color:var(--gold);color:#090b0c}.btn:hover{transform:translateY(-1px)}
+.status{display:inline-flex;align-items:center;gap:8px;border:1px solid #314239;padding:7px 11px;border-radius:99px;font-size:11px;color:#c9d5cf;background:rgba(9,18,14,.55)}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 12px var(--green)}
+.hero-grid{display:grid;grid-template-columns:1.5fr .7fr;gap:25px;align-items:end}
+.quick{display:grid;grid-template-columns:repeat(2,1fr);border:1px solid var(--line);background:rgba(7,10,12,.75);backdrop-filter:blur(8px)}
+.quick div{padding:19px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}.quick div:nth-child(2n){border-right:0}.quick div:nth-child(n+3){border-bottom:0}
+.quick b{display:block;font-size:20px}.quick span{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+section{padding:90px 0;border-top:1px solid var(--line)}.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:35px}.section-head h2{font-size:54px;margin:7px 0 0}.section-head p{max-width:540px;color:var(--muted);font-size:13px}
+.dashboard{background:#0a0f12}.dashgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.dashcard{background:var(--panel);border:1px solid var(--line);padding:24px;min-height:170px}.dashicon{color:var(--gold);font-size:22px}.dashcard h3{font-size:23px;margin:17px 0 8px}.dashcard p{font-size:12px;color:var(--muted);margin:0}
+.focus{display:grid;grid-template-columns:1fr 1fr;gap:15px}.focuscard{background:var(--panel);border:1px solid var(--line);padding:28px}.focuscard.active{border-color:var(--gold);box-shadow:inset 3px 0 0 var(--gold)}.focuscard h3{font-size:31px;margin:8px 0}.focuscard p{color:var(--muted);font-size:13px}.chips{display:flex;flex-wrap:wrap;gap:7px}.chip{border:1px solid #344148;padding:6px 9px;border-radius:3px;font-size:10px;color:#cbd2d5}
+.tabs{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:17px}.tab{cursor:pointer;background:#10161a;color:#aeb9be;border:1px solid var(--line);padding:10px 13px;border-radius:3px;font-size:11px;font-weight:800;text-transform:uppercase}.tab.active,.tab:hover{color:#0a0c0d;background:var(--gold);border-color:var(--gold)}
+.tabpanel{display:none;background:var(--panel);border:1px solid var(--line);padding:32px}.tabpanel.active{display:block}.tabpanel h3{font-size:37px;margin:0 0 10px}.tabpanel p{color:var(--muted);max-width:800px}.panel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.metric{border-left:2px solid var(--gold);padding-left:13px}.metric b{display:block;font-size:12px}.metric span{font-size:11px;color:var(--muted)}
+.timeline{position:relative;margin-left:8px}.timeline:before{content:"";position:absolute;left:116px;top:0;bottom:0;width:1px;background:#29343a}.job{display:grid;grid-template-columns:100px 1fr;gap:42px;padding:0 0 38px;position:relative}.job:after{content:"";position:absolute;left:112px;top:6px;width:9px;height:9px;border:2px solid var(--gold);border-radius:50%;background:var(--bg)}.date{font-size:10px;color:var(--gold);font-weight:800}.job h3{font-size:28px;margin:0 0 5px}.job .company{font-size:12px;font-weight:700;color:#d4dbde}.job ul{margin:10px 0;padding-left:19px;color:var(--muted);font-size:12px}.job li{margin:6px 0}
+.locations{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}.location{padding:14px 16px;border:1px solid var(--line);background:var(--panel);font-size:12px}.location small{display:block;color:var(--gold);font-size:9px;margin-top:4px;text-transform:uppercase;letter-spacing:.08em}
+.gallery{display:grid;grid-template-columns:1.6fr .8fr .8fr;gap:10px}.photo{min-height:230px;border:1px solid var(--line);background-size:cover;background-position:center;position:relative;overflow:hidden}.photo.large{grid-row:span 2;min-height:470px}.photo:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.72),transparent 60%)}.photo span{position:absolute;z-index:1;left:16px;bottom:15px;font-size:10px;letter-spacing:.13em;font-weight:800}
+.contact{background:linear-gradient(135deg,#11181c,#080b0d)}.contactgrid{display:grid;grid-template-columns:1.2fr .8fr;gap:30px}.contact h2{font-size:62px}.contact p{color:var(--muted);max-width:650px}.contactbox{border:1px solid var(--line);background:#0d1317;padding:25px}.contactline{padding:14px 0;border-bottom:1px solid var(--line);font-size:13px}.contactline:last-child{border:0}.contactline span{display:block;color:#6f7b81;font-size:9px;text-transform:uppercase;letter-spacing:.13em;margin-bottom:4px}
+footer{border-top:1px solid var(--line);padding:30px 0;color:#69757a;font-size:10px}.footerflex{display:flex;justify-content:space-between;gap:20px}
+.reveal{opacity:0;transform:translateY(18px);transition:.6s}.reveal.show{opacity:1;transform:none}
+@media(max-width:900px){.dashgrid{grid-template-columns:repeat(2,1fr)}.navlinks{display:none}.menu{display:block}.hero-grid,.contactgrid,.focus{grid-template-columns:1fr}.dashgrid{grid-template-columns:repeat(2,1fr)}.locations{grid-template-columns:repeat(2,1fr)}.gallery{grid-template-columns:1fr 1fr}.photo.large{grid-row:auto;grid-column:1/-1;min-height:340px}.timeline:before{left:76px}.job{grid-template-columns:60px 1fr;gap:34px}.job:after{left:72px}}
+@media(max-width:600px){.wrap{width:min(var(--max),calc(100% - 26px))}.hero{min-height:720px}.hero-content{padding-top:85px}.dashgrid,.locations,.gallery{grid-template-columns:1fr}.photo.large{grid-column:auto}.section-head{display:block}.section-head h2,.contact h2{font-size:43px}.panel-grid{grid-template-columns:1fr}.footerflex{display:block}.footerflex div{margin:8px 0}.quick b{font-size:16px}}
+</style>
+</head>
+<body>
+<header class="hero" id="top">
+  <div class="hero-bg"></div>
+  <div class="wrap nav">
+    <div class="logo">MBASA.<i>SECURITY</i></div>
+    <nav class="navlinks">
+      <a href="#profile">Profile</a><a href="#operations">Operations</a><a href="#experience">Experience</a><a href="#areas">Areas</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a>
+    </nav>
+    <button class="menu" onclick="document.querySelector('.navlinks').classList.toggle('mobile')">MENU</button>
+  </div>
+  <div class="wrap hero-grid">
+    <div class="hero-content">
+      <div class="kicker">// Armed Response • Protection • Escort</div>
+      <h1>MBASA<br>NUNGU</h1>
+      <h2>Armed Response &amp; Protection Specialist</h2>
+      <p>Specialising in armed response, armed escorting, armed guarding and rapid-response operations. Based around Cape Town and available for professional security assignments.</p>
+      <div class="actions">
+        <a class="btn primary" href="assets/Mbasa-Nungu-Armed-Response-CV.pdf" download>↓ Download CV</a>
+        <a class="btn" href="mailto:nungumbasa@gmail.com?subject=Security%20Opportunity%20-%20Mbasa%20Nungu">✉ Email Directly</a>
+        <a class="btn" href="tel:+27601161353">☎ Call Mbasa</a>
+        <a class="btn" href="#operations">Explore Profile →</a>
+      </div>
+      <span class="status"><span class="dot"></span> Available for security opportunities • Cape Town</span>
+    </div>
+    <div class="quick">
+      <div><b>01</b><span>Armed Response</span></div>
+      <div><b>02</b><span>Armed Escort</span></div>
+      <div><b>03</b><span>Armed Guard</span></div>
+      <div><b>04</b><span>Rapid Response</span></div><div><b>05</b><span>Cash-in-Transit</span></div><div><b>06</b><span>Security Escort</span></div>
+    </div>
+  </div>
+</header>
+
+<section class="dashboard" id="profile">
+<div class="wrap reveal">
+  <div class="section-head"><div><div class="kicker">// SECURITY PROFILE</div><h2>A dashboard, not just a CV.</h2></div><p>A recruiter can scan the operational focus, experience, location availability and contact options before opening the full CV.</p></div>
+  <div class="dashgrid">
+    <article class="dashcard"><div class="dashicon">◈</div><h3>Response</h3><p>Armed response and rapid-response positioning for security operations.</p></article>
+    <article class="dashcard"><div class="dashicon">◉</div><h3>Protection</h3><p>Armed guarding and escorting with a professional, safety-focused approach.</p></article>
+    <article class="dashcard"><div class="dashicon">⌁</div><h3>Mobile</h3><p>C1 driving licence, vehicle inspections, route discipline and mobile work experience.</p></article>
+    <article class="dashcard"><div class="dashicon">▣</div><h3>Reporting</h3><p>Incident reporting, records, documentation, audits and structured communication.</p></article><article class="dashcard"><div class="dashicon">₿</div><h3>Cash-in-Transit</h3><p>Experience in cash-in-transit security operations, armed protection, escorting and response-focused duties.</p></article><article class="dashcard"><div class="dashicon">◒</div><h3>Protection Escort</h3><p>Security escort capability with a strong focus on movement, awareness, communication and professional conduct.</p></article>
+  </div>
+</div>
+</section>
+
+<section id="operations">
+<div class="wrap reveal">
+  <div class="section-head"><div><div class="kicker">// OPERATIONAL FOCUS</div><h2>Security capability</h2></div><p>Core areas to position Mbasa for security employers, response teams, guarding operations and protection assignments.</p></div>
+  <div class="tabs">
+    <button class="tab active" data-tab="response">Armed Response</button>
+    <button class="tab" data-tab="escort">Armed Escort</button>
+    <button class="tab" data-tab="guard">Armed Guard</button>
+    <button class="tab" data-tab="mobile">Mobile Response</button><button class="tab" data-tab="cit">Cash-in-Transit</button>
+  </div>
+  <div class="tabpanel active" id="response"><h3>Rapid response mindset</h3><p>Professional security positioning centred on response readiness, situational awareness, responsible conduct, communication and accurate incident documentation.</p><div class="panel-grid"><div class="metric"><b>RESPONSE</b><span>Rapid-response operations</span></div><div class="metric"><b>AWARENESS</b><span>Situational responsibility</span></div><div class="metric"><b>REPORTING</b><span>Incident documentation</span></div></div></div>
+  <div class="tabpanel" id="escort"><h3>Armed escort operations</h3><p>Focused on armed escort assignments requiring disciplined movement, route awareness, professional communication, reliability and protection-focused conduct.</p><div class="panel-grid"><div class="metric"><b>ESCORT</b><span>Armed escort duties</span></div><div class="metric"><b>ROUTE</b><span>Route planning awareness</span></div><div class="metric"><b>CONDUCT</b><span>Professional client-facing conduct</span></div></div></div>
+  <div class="tabpanel" id="guard"><h3>Armed guarding</h3><p>Positioned for armed guard and protection roles requiring alertness, responsible conduct, access awareness, reporting and adherence to operational procedures.</p><div class="panel-grid"><div class="metric"><b>GUARDING</b><span>Armed protection focus</span></div><div class="metric"><b>DISCIPLINE</b><span>Procedure-driven work</span></div><div class="metric"><b>RECORDS</b><span>Accurate documentation</span></div></div></div>
+  <div class="tabpanel" id="mobile"><h3>Mobile security support</h3><p>Takealot driving experience adds practical mobile-operations strengths: safe vehicle operation, pre-trip inspections, route plans, traffic-law compliance, logbooks and escalation of incidents.</p><div class="panel-grid"><div class="metric"><b>LICENCE</b><span>Code 10 (C1)</span></div><div class="metric"><b>VEHICLE</b><span>Pre-trip inspection</span></div><div class="metric"><b>ROUTES</b><span>Route-plan discipline</span></div></div></div>
+  <div class="tabpanel" id="cit"><h3>Cash-in-transit security</h3><p>Experience in cash-in-transit security operations, including armed protection, escorting, secure movement of cash and valuables, vigilance and response-focused duties.</p><div class="panel-grid"><div class="metric"><b>CIT</b><span>Cash-in-transit operations</span></div><div class="metric"><b>ESCORT</b><span>Protection during movement</span></div><div class="metric"><b>RESPONSE</b><span>Security response readiness</span></div></div></div>
+</div>
+</section>
+
+<section>
+<div class="wrap reveal">
+  <div class="section-head"><div><div class="kicker">// PROFESSIONAL STRENGTHS</div><h2>What he brings</h2></div></div>
+  <div class="focus">
+    <article class="focuscard active"><div class="kicker">01 / OPERATIONAL</div><h3>Safety &amp; discipline</h3><p>Responsible vehicle operation, pre-trip checks, route plans, traffic-law compliance, punctuality and escalation of operational issues.</p><div class="chips"><span class="chip">Safety</span><span class="chip">Route Discipline</span><span class="chip">Vehicle Checks</span><span class="chip">Reliability</span></div></article>
+    <article class="focuscard"><div class="kicker">02 / CONTROL</div><h3>Reporting &amp; judgement</h3><p>Experience with incident reporting, records, audits, administrative controls, ethical judgement, critical thinking and professional communication.</p><div class="chips"><span class="chip">Reporting</span><span class="chip">Audits</span><span class="chip">Critical Thinking</span><span class="chip">Teamwork</span></div></article>
+  </div>
+</div>
+</section>
+
+<section id="experience">
+<div class="wrap reveal">
+  <div class="section-head"><div><div class="kicker">// CAREER TIMELINE</div><h2>Professional experience</h2></div><p>Experience taken from the supplied CV and presented in a security-relevant way without inventing unsupported employment duties.</p></div>
+  <div class="timeline">
+    <article class="job"><div class="date">SEP 2024<br>MAR 2026</div><div><h3>Truck Driver</h3><div class="company">Takealot • Cape Town, Western Cape</div><ul><li>Safe vehicle operation, route planning and traffic-law compliance.</li><li>Pre-trip vehicle inspections and reporting of accidents, delays and issues.</li><li>Accurate logbooks, delivery documents, notes and receipts.</li><li>Mobile working environment requiring responsibility, punctuality and communication.</li></ul></div></article>
+    <article class="job"><div class="date">JUL 2023<br>DEC 2024</div><div><h3>Human Resource Trainee</h3><div class="company">South African Police Service (SAPS) • Centane, Eastern Cape</div><ul><li>HR administration within a structured public-service environment.</li><li>Performance-management support, reporting and process audits.</li><li>Benefits-related tasks and collaboration with HR leadership.</li><li>Professional handling of administrative information and procedures.</li></ul></div></article>
+  </div>
+</div>
+</section>
+
+<section id="areas">
+<div class="wrap reveal">
+  <div class="section-head"><div><div class="kicker">// LOCATION AVAILABILITY</div><h2>Cape Town coverage</h2></div><p>Available around Cape Town, with flexibility for security assignments across major metro areas. Contact directly to confirm assignment requirements and travel arrangements.</p></div>
+  <div class="locations">
+    <div class="location">Cape Town CBD<small>City Centre</small></div><div class="location">City Bowl<small>Gardens • Vredehoek</small></div><div class="location">Atlantic Seaboard<small>Sea Point • Green Point</small></div><div class="location">Southern Suburbs<small>Claremont • Rondebosch</small></div>
+    <div class="location">Northern Suburbs<small>Bellville • Goodwood</small></div><div class="location">Cape Flats<small>Delft • Grassy Park</small></div><div class="location">Table View / West Coast<small>Table View • Blouberg</small></div><div class="location">Helderberg / East<small>Stellenbosch • surrounds</small></div>
+  </div>
+</div>
+</section>
+
+<section id="gallery">
+<div class="wrap reveal">
+  <div class="section-head"><div><div class="kicker">// SECURITY GALLERY</div><h2>Operational profile</h2></div><p>Supplied security photograph displayed as the primary visual profile. Additional verified photos can be added to this gallery later.</p></div>
+  <div class="gallery">
+    <div class="photo large" style="background-image:url('assets/security-operations.jpg')"><span>SECURITY OPERATIONS</span></div>
+    <div class="photo" style="background-image:url('assets/security-operations.jpg');background-position:20% center"><span>RESPONSE PROFILE</span></div>
+    <div class="photo" style="background-image:url('assets/security-operations.jpg');background-position:80% center"><span>PROTECTION TEAM</span></div>
+  </div>
+</div>
+</section>
+
+<section id="contact" class="contact">
+<div class="wrap reveal contactgrid">
+  <div><div class="kicker">// LET'S CONNECT</div><h2>Need a response professional?</h2><p>Recruiters and security companies can download the CV, email Mbasa directly or call him from this page.</p><div class="actions"><a class="btn primary" href="assets/Mbasa-Nungu-Armed-Response-CV.pdf" download>↓ Download CV</a><a class="btn" href="mailto:nungumbasa@gmail.com?subject=Security%20Employment%20Opportunity%20for%20Mbasa%20Nungu">✉ Email Mbasa</a><a class="btn" href="tel:+27601161353">☎ +27 60 116 1353</a></div></div>
+  <div class="contactbox"><div class="contactline"><span>Email</span><a href="mailto:nungumbasa@gmail.com">nungumbasa@gmail.com</a></div><div class="contactline"><span>Primary</span><a href="tel:+27601161353">+27 60 116 1353</a></div><div class="contactline"><span>Alternative</span><a href="tel:+27782599762">+27 78 259 9762</a></div><div class="contactline"><span>Location</span>Cape Town, Western Cape, South Africa</div><div class="contactline"><span>Availability</span><span style="color:#58c48c">● Available for security opportunities</span></div></div>
+</div>
+</section>
+
+<footer><div class="wrap footerflex"><div>© 2026 MBASA NUNGU • ARMED RESPONSE &amp; PROTECTION</div><div>Built for GitHub Pages • Responsive • Recruiter-ready</div></div></footer>
+<script>
+const tabs=document.querySelectorAll('.tab'), panels=document.querySelectorAll('.tabpanel');
+tabs.forEach(t=>t.addEventListener('click',()=>{tabs.forEach(x=>x.classList.remove('active'));panels.forEach(x=>x.classList.remove('active'));t.classList.add('active');document.getElementById(t.dataset.tab).classList.add('active')}));
+const io=new IntersectionObserver(entries=>entries.forEach(e=>e.isIntersecting&&e.target.classList.add('show')),{threshold:.08});
+document.querySelectorAll('.reveal').forEach(x=>io.observe(x));
+</script>
+</body>
+</html>
